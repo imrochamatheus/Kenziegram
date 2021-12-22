@@ -1,3 +1,6 @@
+## Atividade realizada com o objetivo de praticar conceitos de grid e flexbox.
+
+
 ## Propriedades:
 
 * Utilize conceitos de **flexBox** para pocionar os elementos;
