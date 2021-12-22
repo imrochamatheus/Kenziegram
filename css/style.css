@@ -1,0 +1,517 @@
+/*
+Theme Name: Instagram
+Author: Kenzie Academy
+Author URI: kenzie.com.br;
+Version: 1.0
+ 
+--------------------------------------------
+SUGESTÃO DE ESTRUTURAÇÃO BASE 
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** BODY
+**** TOPO
+**** RODAPÉ
+**** PÁGINA INICIAL
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+	font-family: Helvetica, 'Roboto', Arial, sans-serif;
+	background-color: #FAFAFA;
+}
+
+@media screen and (max-width: 480px) {
+
+	header nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+	}
+	
+	header nav > .instagram-logo > figure {
+		max-width: 28vw;
+	}
+
+	header nav a {
+		display: block;
+		color: rgba(128, 128, 128, 1);
+		font-size: 20px;
+		margin-right: 12px;
+	}
+
+	header img {
+		display: block;
+		max-width: 100%;
+	}
+	
+	.profile-photo > figure {
+		max-width: 20vw;
+		min-width: 80px;
+	}
+
+	.profile-photo > figure > img {
+		display: block;
+		max-width: 100%;
+		border: 3px solid white;
+		border-radius: 100%;
+		box-shadow: 0 0 0 1px rgba(128, 128, 128, 1);
+	}
+
+	.profile-content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.profile-photo {
+		flex: 1 0 auto;
+	}
+
+	.profile-photo > figure {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.profile-info {
+		flex: 1 0 auto;
+	} 
+
+	.profile-follow {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.profile-follow button {
+		color: #fff;
+		background-color:#0095F6;
+		border: 1px solid #fff;
+		border-radius: 5px;
+		padding: 5px 10px;
+		font-weight: bolder;
+	}
+
+	.profile-data ul {
+		display: flex;
+		margin: 0 5px;
+		justify-content: space-evenly;
+	}
+
+	.profile-data ul li{
+		text-align: center;
+		padding: 10px 5px;
+	}
+
+	.profile-data span {
+		font-weight: bolder;
+	}
+
+	.profile-data li span::after{
+		content: '\A';
+		white-space: pre;
+	}
+
+	.moreProfileInfo {
+		padding: 10px;
+	}
+
+	.moreProfileInfo h2 {
+		margin: 10px 0 ;
+	}
+
+	.moreProfileInfo p {
+		line-height: 22px;
+		color: #717171;
+	}
+
+	.highlighted-stories ul {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		/* margin: 10px 0; */
+	}
+
+	.highlighted-stories ul li{
+		width: 100px;
+	}
+
+	.highlighted-stories ul li figure {
+		width:100px;
+		margin: 10px auto;
+	}
+
+	.highlighted-stories ul li figcaption {
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	.highlighted-stories ul li img {
+		display: block;
+		max-width: 70%;
+		margin: 0 auto;
+		border: 3px solid white;
+		border-radius: 100%;
+		box-shadow: 0 0 0 1px rgba(128, 128, 128, 1);
+	}
+
+	.highlighted-stories figcaption {
+		text-align: center;
+	}
+
+	.profile-posts nav {
+		margin: 10px 0;
+	}
+
+	.profile-posts nav ul {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.profile-posts nav ul li {
+		width: 100px;
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+		justify-content: space-evenly;
+	}
+
+	.profile-posts nav ul li:first-child {
+		border-bottom: 2px solid rgba(128, 128, 128, 0.7);
+	}
+
+	.profile-posts nav a {
+		text-decoration: none;
+		font-size: 12px;
+		text-transform: lowercase;
+		color: #000;
+	}
+
+	.posts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.posts li {
+		box-sizing: border-box;
+		max-width: 33.33%;
+		padding: 1px;
+	}
+
+	.posts li img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+@media screen and (min-width: 481px) {
+	
+	body {
+		margin: 0 auto;
+		font-family: 'Roboto';
+		background-color: #FAFAFA; 
+	}
+	
+	body header {
+		color: #fff;
+	}
+	
+	header::after {
+		content: "";
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+		border-top: 1px solid #DBDBDB;
+	}
+
+	header nav {
+		display: flex;
+		padding: 8px 0;
+		margin: 0 auto;
+		max-width: 900px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.searchBar, .login {
+		display: block;
+	}
+
+	.searchBar input {
+		width: 250px;
+		font-size: 15px;
+		padding: 8px 10px;
+		border-radius: 15px;
+		border-radius: 5px;
+		background-color: #FAFAFA;
+		border: 1px solid #DBDBDB;
+	}
+
+	.searchBar input::placeholder {
+		font-size: 12px;
+	}
+
+	header nav .instagram-logo {
+		width: 130px;
+	}
+
+	header nav .login input[type*='button'] {
+		color: #fff;
+		padding: 8px 10px;
+		margin-left: 30px;
+		border-radius: 5px;
+		font-weight: lighter;
+		border: 1px solid #fff;
+		background-color:#0095F6;
+	}
+
+	.login a {
+		color: #0095F6;
+		font-weight: 500;
+		font-size: 0.9em;
+		padding: 5px 10px;
+	}
+
+	.instagram-logo img {
+		display: block;
+		width: 100%;
+	}
+
+	main {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.profile-content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.profile-photo {
+		display: flex;
+		margin: 10px 35px 0 35px;
+		grid-row-end: 3;
+		grid-row-start: 1;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.profile-photo figure{
+		width: 65%;
+		display: flex;
+		padding: 3px 5px;
+		min-width: 120px;
+		border-radius: 50%;
+		justify-content: center;
+		background-image: linear-gradient(to bottom, #E13E66, #F99E4D);
+	}
+
+	.profile-photo img {
+		width: 100%;
+		border-radius: 100%;
+		border: 2px solid #fff;
+	}
+
+	.profile-follow {
+		display: flex;
+		line-height: 1.8em;
+		margin-top: 20px;
+		color: rgba(38,38,38,1);
+		justify-content: flex-start;
+	}
+
+	.profile-follow h1 {
+		font-size: 1.7em;
+		font-weight: 300;
+	}
+
+	.profile-follow button {
+		color: #fff;
+		padding: 5px 10px;
+		margin-left: 30px;
+		border-radius: 5px;
+		font-weight: lighter;
+		border: 1px solid #fff;
+		background-color:#0095F6;
+	}
+
+	.profile-data {
+		padding: 20px 0;
+	}
+
+	.profile-data ul {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.profile-data ul li{
+		text-align: center;
+		padding: 0 40px 0 0;
+		text-transform: lowercase;
+	}
+
+	.profile-data span {
+		margin-right: 5px;	
+		font-weight: bolder;
+	}
+
+	.moreProfileInfo {
+		color: #000;
+		font-weight: 300;
+		line-height: 25px;
+	}
+
+	.moreProfileInfo h2 {
+		font-size: 1em;
+		padding-bottom: 10px;
+	}
+
+	.moreProfileInfo li a {
+		color: #00408B;
+		font-weight: 500;
+	}
+
+	.highlighted-stories ul {
+		display: flex;
+		margin: 30px 15px;
+		justify-content: flex-start;
+	}
+
+	.highlighted-stories ul li {
+		margin-right: 50px;
+		
+	}
+
+	.highlighted-stories ul li figure{
+		width: 88px;
+	}
+
+	.highlighted-stories ul li figcaption{
+		text-align: center;
+		margin-top: 10px;
+  		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.highlighted-stories ul li img{
+		width: 100%;
+		display: block;
+		border-radius: 100%;
+		box-sizing: border-box;
+		border: 3px solid #fff;
+		box-shadow: 0 0 0 1px rgba(128, 128, 128, .7);
+	}
+
+	.profile-posts nav ul{
+		display:flex;
+		align-items: center;
+		margin-bottom: 25px;
+		justify-content: space-evenly;
+	}
+
+	.profile-posts nav::before {
+		content: "";
+		width: 100%;
+		display: block;
+		border-top: 2px solid #DBDBDB;
+	  }
+
+	.profile-posts nav ul li {
+		top: -2px;
+		display: flex;
+		padding: 15px 0;
+		font-size: 0.9em;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		border-top: 2px solid #DBDBDB;
+	}
+
+	.profile-posts nav ul li img {
+		width: 15px;
+	}
+
+	.profile-posts nav ul li a{
+		color: #717171;
+	}
+
+	.profile-posts nav ul li:hover {
+		border-top: 2px solid #717171;
+	}
+
+	.profile-posts nav ul li:hover a {
+		color: #000;
+		font-weight: bolder;
+	}
+
+	.profile-posts nav ul li img{
+		margin-right: 10px;
+	}
+
+	.posts {
+		display: grid;
+		grid-gap: 20px;
+		box-sizing: border-box;
+		justify-content: center;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.posts li {
+		max-width: 285px;
+		box-sizing: border-box;
+	}
+
+	.posts img {
+		display: block;
+		width: 100%;
+	
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 650px){
+	
+	.searchBar {
+		display: none;
+	}
+
+	header nav .login input[type*='button'] {
+		padding: 5px 10px;
+	}
+
+	.profile-content {
+		grid-template-columns: 1fr;
+		flex-direction: column;
+	}
+
+	.profile-photo {
+		grid-row-start: 2;
+		grid-row-end: 3;
+		width: 50%;
+		margin: 20px auto;
+	}
+
+	.profile-info {
+		grid-column-start: 1;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.profile-data ul {
+		display: none;
+	}
+
+	.moreProfileInfo {
+		padding: 0 0 0 15px;
+	}
+
+	.posts {
+		padding: 0 15px;
+	}
+}
