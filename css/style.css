@@ -261,7 +261,7 @@ body {
 
 	header nav .login input[type*='button'] {
 		color: #fff;
-		padding: 8px 10px;
+		padding: 7px 25px;
 		margin-left: 30px;
 		border-radius: 5px;
 		font-weight: lighter;
@@ -292,19 +292,17 @@ body {
 	}
 
 	.profile-photo {
-		display: flex;
 		margin: 10px 35px 0 35px;
 		grid-row-end: 3;
 		grid-row-start: 1;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.profile-photo figure{
-		width: 65%;
+		width: 70%;
 		display: flex;
-		padding: 3px 5px;
+		padding: 3px 8px;
 		min-width: 120px;
+		margin: 0 auto;
 		border-radius: 50%;
 		justify-content: center;
 		background-image: linear-gradient(to bottom, #E13E66, #ff8c8c, #F99E4D);
@@ -313,7 +311,7 @@ body {
 	.profile-photo img {
 		width: 100%;
 		border-radius: 100%;
-		border: 2px solid #fff;
+		border: 5px solid #fff;
 	}
 
 	.profile-follow {
@@ -331,7 +329,8 @@ body {
 
 	.profile-follow button {
 		color: #fff;
-		padding: 5px 10px;
+		padding: 7px 20px;
+		font-size: 0.9em;
 		margin-left: 30px;
 		border-radius: 5px;
 		font-weight: lighter;
@@ -480,7 +479,7 @@ body {
 	}
 
 	header nav .login input[type*='button'] {
-		padding: 5px 10px;
+		padding: 7px 20px;
 	}
 
 	.profile-content {
