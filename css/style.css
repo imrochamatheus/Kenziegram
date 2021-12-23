@@ -512,6 +512,10 @@ body {
 		padding: 0 0 0 15px;
 	}
 
+	.highlighted-stories ul li {
+		margin-right: 15px;
+	}
+
 	.posts {
 		padding: 0 15px;
 	}
