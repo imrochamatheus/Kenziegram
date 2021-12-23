@@ -307,7 +307,7 @@ body {
 		min-width: 120px;
 		border-radius: 50%;
 		justify-content: center;
-		background-image: linear-gradient(to bottom, #E13E66, #F99E4D);
+		background-image: linear-gradient(to bottom, #E13E66, #ff8c8c, #F99E4D);
 	}
 
 	.profile-photo img {
@@ -367,6 +367,7 @@ body {
 
 	.moreProfileInfo h2 {
 		font-size: 1em;
+		font-weight: 500;
 		padding-bottom: 10px;
 	}
 
@@ -445,7 +446,7 @@ body {
 
 	.profile-posts nav ul li:hover a {
 		color: #000;
-		font-weight: bolder;
+		font-weight: 500;
 	}
 
 	.profile-posts nav ul li img{
